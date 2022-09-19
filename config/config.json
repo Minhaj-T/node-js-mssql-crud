@@ -9,8 +9,8 @@
         "authentication": {
             "type": "default",
             "options": {
-                "userName": "sa",
-                "password": "049338"
+                "userName": "USER-NAME",
+                "password": "PASSWORD"
             }
         }
     },

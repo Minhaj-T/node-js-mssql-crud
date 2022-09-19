@@ -31,7 +31,7 @@ const registerUser = asyncHandler(async (req, res) => {
       _id: dataValues.id,
       name: dataValues.name,
       email: dataValues.email,
-      token: generateToken(17),
+      token: generateToken(dataValues.id),
     });
   } else {
     res.status(400);
