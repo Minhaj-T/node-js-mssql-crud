@@ -7,9 +7,10 @@ const {
   deleteTodo,
   editTodo
 } = require('../controllers/todoController');
+const validation = require("../middleware/validate-request");
 
 router.get('/all', getAllTodos);
-router.post('/new', newTodo);
+router.post('/new',validation.validateTodo, newTodo);
 router.get('/find/:id', getTodo);
 router.delete('/delete/:id', deleteTodo);
 router.put('/edit/:id',editTodo );
